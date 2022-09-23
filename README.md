@@ -1,7 +1,5 @@
 # csnake
 
----
-
 A little snake game for the terminal, written in C using ncurses.
 
 ## Build and Run
