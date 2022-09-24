@@ -298,7 +298,7 @@ void main_loop(void)
 					break;
 
 				case 115:
-					if(fps == 0)
+					if(fps == 1)
 						break;
 					fps--;
 					break;
