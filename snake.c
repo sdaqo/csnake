@@ -35,6 +35,16 @@ void generate_apple(int win_width, int win_height)
 	randy = rand() % win_height;
 	randx = rand() % win_width;
 
+	randy++;
+	randx++;
+
+	if(randy == win_height || 
+	   randy == win_height - 1)
+		randy--;
+
+	if(randx >= win_width)
+		randx--;
+
 	apple->posx = randx;
 	apple->posy = randy;
 }
