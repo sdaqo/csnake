@@ -10,6 +10,7 @@ A little snake game for the terminal, written in C using ncurses.
 </details>
 
 ## Build and Run
+Note: Make sure `ncurses` is installed on your (linux) system.
 
 ```
 $ ./build.sh
