@@ -77,7 +77,7 @@ void add_body_last(void)
 
 
 	node->posx = 0;
-    node->posy = 0;
+	node->posy = 0;
 	node->next = NULL;
 
 	Body *temp = snake;
@@ -178,17 +178,18 @@ void draw_game_over(WINDOW *game_window, int win_width, int win_height)
 	
 	attron(A_BLINK);
 	mvwprintw(game_window, 
-			  win_height / 2,
-			  (win_width - strlen(game_over)) / 2,
-			  "%s",
-			  game_over);
+		  win_height / 2,
+		  (win_width - strlen(game_over)) / 2,
+		  "%s",
+		  game_over);
+
 	attroff(A_BLINK);
 
 	mvwprintw(game_window,
-			  win_height / 2 + 2,
-			  (win_width - strlen(sub_text)) / 2,
-			  "%s",
-			  sub_text);
+		  win_height / 2 + 2,
+		  (win_width - strlen(sub_text)) / 2,
+		  "%s",
+		  sub_text);
 }
 
 int check_collission(int win_width, int win_height) {
@@ -329,18 +330,18 @@ void main_loop(void)
 		} else {
 			char paused_txt[] = "PAUSED";
 			mvwprintw(game_window,
-					  height / 2,
-					  (width - strlen(paused_txt)) / 2,
-					  "%s", paused_txt);
+				  height / 2,
+				  (width - strlen(paused_txt)) / 2,
+				  "%s", paused_txt);
 		}
 
 		box(game_window, 0, 0);
 		mvwprintw(game_window, 0, 1, "Score: %d", score);
 		mvwprintw(game_window, 0, width - 8, "FPS: %d", fps);
 		mvwprintw(game_window,
-				  height - 1,
-				  1,
-				  "Q... quit | P... pause | W... fps up | S... fps down");
+			  height - 1,
+			  1,
+			  "Q... quit | P... pause | W... fps up | S... fps down");
 		wrefresh(game_window);
 
 		napms((int) (1000 / fps));
