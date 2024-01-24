@@ -344,7 +344,11 @@ void main_loop(void)
 			  "Q... quit | P... pause | W... fps up | S... fps down");
 		wrefresh(game_window);
 
-		napms((int) (1000 / fps));
+    if (dir->dx == 0 && (dir->dy == 1 || dir->dy == -1))  {
+      napms((int) (1000 / (fps / 2)));
+    } else {
+      napms((int) (1000 / fps));
+    }
 	}
 
 	main_loop();
